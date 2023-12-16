@@ -1,5 +1,5 @@
 function cursor_stack_to_ghost(player)
-	if player.cursor_stack and player.cursor_stack.valid and player.cursor_stack.valid_for_read then
+	if player.cursor_stack and player.cursor_stack.valid and player.cursor_stack.valid_for_read and player.cursor_stack.prototype.place_result then
 		player.get_main_inventory().insert({name=player.cursor_stack.name, count=player.cursor_stack.count})
 		player.cursor_ghost = player.cursor_stack.name
 		player.cursor_stack.clear()

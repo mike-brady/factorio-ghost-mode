@@ -14,12 +14,12 @@ local shortcut = {
 	toggleable = true,
 	action = 'lua',
 	icon = {
-		filename = '__core__/graphics/icons/mip/ghost-entity.png',
-		width = 32,
-		height = 32,
+		filename = '__core__/graphics/icons/technology/effect/effect-ghost.png',
+		width = 64,
+		height = 64,
 		scale = 1,
 		flags = {'icon'}
-	},
+	}
 }
 
 data:extend({custom_input, shortcut})
