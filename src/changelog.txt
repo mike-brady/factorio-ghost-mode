@@ -1,0 +1,12 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2023-12-29
+  Features:
+    - Added support for tiles.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2023-12-16
+  Features:
+    - Created Ghost-mode for buildable entities.
+    - Created a shortcut to toggle Ghost-mode.
+    - Created key binding (Shift + G) to toggle Ghost-mode.
