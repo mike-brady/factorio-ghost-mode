@@ -20,7 +20,6 @@ function ghost_to_stack(player)
 	end
 end
 
-
 function toggle_ghost_mode(player)
 	local state = player.is_shortcut_toggled('ghost_mode_toggle_shortcut')
 
@@ -33,7 +32,6 @@ function toggle_ghost_mode(player)
 	end
 end
 
-
 script.on_event('ghost_mode_toggle_custom_input',
 	function(event)
 		local player = game.get_player(event.player_index)
@@ -42,15 +40,14 @@ script.on_event('ghost_mode_toggle_custom_input',
 )
 
 
-
 script.on_event(defines.events.on_lua_shortcut,
 	function(event)
-		local player = game.get_player(event.player_index)
-		toggle_ghost_mode(player)
+		if event.prototype_name == 'ghost_mode_toggle_shortcut' then
+			local player = game.get_player(event.player_index)
+			toggle_ghost_mode(player)
+		end
 	end
 )
-
-
 
 script.on_event(defines.events.on_player_cursor_stack_changed,
 	function(event)

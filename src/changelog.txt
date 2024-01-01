@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 2024-01-01
+  Bug Fixes:
+    - Fixed Ghost-mode being toggled when any shortcut is pressed, not just the Ghost-mode shortcut.
+---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 2023-12-29
   Features:
