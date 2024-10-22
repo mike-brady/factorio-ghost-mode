@@ -9,7 +9,7 @@ function stack_to_ghost(player)
 end
 
 function ghost_to_stack(player)
-	if player.cursor_ghost and player.cursor_ghost.valid then
+	if player.cursor_ghost then
 		local stack, idx = player.get_main_inventory().find_item_stack(player.cursor_ghost.name)
 		if stack then
 			player.cursor_stack.transfer_stack(stack)
