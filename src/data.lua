@@ -13,13 +13,10 @@ local shortcut = {
 	associated_control_input = 'ghost_mode_toggle_custom_input',
 	toggleable = true,
 	action = 'lua',
-	icon = {
-		filename = '__core__/graphics/icons/technology/effect/effect-ghost.png',
-		width = 64,
-		height = 64,
-		scale = 1,
-		flags = {'icon'}
-	}
+	icon = '__core__/graphics/icons/technology/effect/effect-ghost.png',
+	icon_size = 64,
+	small_icon = '__core__/graphics/icons/technology/effect/effect-ghost.png',
+	small_icon_size = 64
 }
 
 data:extend({custom_input, shortcut})
