@@ -1,9 +1,9 @@
 function stack_to_ghost(player)
 	if player.cursor_stack and player.cursor_stack.valid and player.cursor_stack.valid_for_read then
 		if player.cursor_stack.prototype.place_result or player.cursor_stack.prototype.place_as_tile_result then
-			player.get_main_inventory().insert(player.cursor_stack)
-			player.cursor_ghost = player.cursor_stack
-			player.cursor_stack.clear()
+			local stack = player.cursor_stack.name
+			player.clear_cursor()
+			player.cursor_ghost = stack
 		end
 	end
 end
@@ -12,7 +12,7 @@ function ghost_to_stack(player)
 	if player.cursor_ghost then
 		local stack, idx = player.get_main_inventory().find_item_stack(player.cursor_ghost.name)
 		if stack then
-			player.cursor_stack.transfer_stack(stack)
+			player.pipette_entity(stack.name)
 		else
 			player.cursor_stack.clear()
 		end
