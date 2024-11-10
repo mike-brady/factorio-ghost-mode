@@ -1,8 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+Date: 2024-11-10
+  Features:
+    - With ghost mode enabled, using the pipette tool (Q) to pick an item will also always pick a ghost item.
+---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 2024-11-09
   Bug Fixes:
-    - Fixed items getting lost when using Ghost-mode with a full inventory.
+    - Fixed items getting lost when using ghost mode with a full inventory.
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 2024-10-22
@@ -12,7 +17,7 @@ Date: 2024-10-22
 Version: 1.1.1
 Date: 2024-01-01
   Bug Fixes:
-    - Fixed Ghost-mode being toggled when any shortcut is pressed, not just the Ghost-mode shortcut.
+    - Fixed ghost mode being toggled when any shortcut is pressed, not just the ghost mode shortcut.
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 2023-12-29
@@ -22,6 +27,6 @@ Date: 2023-12-29
 Version: 1.0.0
 Date: 2023-12-16
   Features:
-    - Created Ghost-mode for buildable entities.
-    - Created a shortcut to toggle Ghost-mode.
+    - Created ghost mode for buildable entities.
+    - Created a shortcut to toggle ghost mode.
     - Created key binding (Shift + G) to toggle Ghost-mode.
