@@ -3,7 +3,6 @@ function set_cursor_ghost(player, item)
 	player.cursor_ghost = item
 end
 
-
 function stack_to_ghost(player)
 	if player.cursor_stack and player.cursor_stack.valid and player.cursor_stack.valid_for_read then
 		if player.cursor_stack.prototype.place_result or player.cursor_stack.prototype.place_as_tile_result then
@@ -15,8 +14,8 @@ end
 function ghost_to_stack(player)
 	if player.cursor_ghost then
 		local stack, idx = player.get_main_inventory().find_item_stack(player.cursor_ghost.name)
-		if stack then
-			player.pipette_entity(stack.name)
+		if stack and stack.prototype and stack.prototype.place_result then
+			player.pipette_entity(stack.prototype.place_result)
 		else
 			player.cursor_stack.clear()
 		end
@@ -42,7 +41,6 @@ script.on_event('ghost_mode_toggle_custom_input',
 		toggle_ghost_mode(player)
 	end
 )
-
 
 script.on_event(defines.events.on_lua_shortcut,
 	function(event)
