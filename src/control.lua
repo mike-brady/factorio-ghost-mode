@@ -12,7 +12,7 @@ function stack_to_ghost(player)
 end
 
 function ghost_to_stack(player)
-	if player.cursor_ghost then
+	if player.cursor_ghost and player.get_main_inventory() then
 		local stack, idx = player.get_main_inventory().find_item_stack(player.cursor_ghost.name)
 		if stack and stack.prototype and stack.prototype.place_result then
 			player.pipette_entity(stack.prototype.place_result)
