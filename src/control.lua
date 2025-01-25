@@ -1,12 +1,15 @@
-function set_cursor_ghost(player, item)
+function set_cursor_ghost(player, item, quality)
 	player.clear_cursor()
-	player.cursor_ghost = item
+	player.cursor_ghost = {
+		name = item,
+		quality = quality
+	}
 end
 
 function stack_to_ghost(player)
 	if player.cursor_stack and player.cursor_stack.valid and player.cursor_stack.valid_for_read then
 		if player.cursor_stack.prototype.place_result or player.cursor_stack.prototype.place_as_tile_result then
-			set_cursor_ghost(player, player.cursor_stack.name)
+			set_cursor_ghost(player, player.cursor_stack.name, player.cursor_stack.quality)
 		end
 	end
 end
@@ -64,7 +67,7 @@ script.on_event(defines.events.on_player_pipette,
 	function(event)
 		local player = game.get_player(event.player_index)
 		if player.is_shortcut_toggled('ghost_mode_toggle_shortcut') then
-			set_cursor_ghost(player, event.item.name)
+			set_cursor_ghost(player, event.item.name, event.quality)
 		end
 	end
 )
